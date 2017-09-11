@@ -1,9 +1,22 @@
-/* 
 
-I built this login form to block the front end of most of my freelance wordpress projects during the development stage. 
-
-This is just the HTML / CSS of it but it uses wordpress's login system. 
-
-Nice and Simple
-
-*/
+$( "li" ).hover(
+  function() {
+      $(this).find("a").css("color","#FFF");
+      $(this).find("span").stop().animate({
+      width:"100%",
+      opacity:"1",
+    }, 600, function () {
+        // Animation complete.
+        // Show Navigation
+    })
+  }, function() {
+      $(this).find("a").css("color","#555");
+      $(this).find("span").stop().animate({
+      width:"0%",
+      opacity:"0",
+    }, 600, function () {
+        // Animation complete.
+        // Show Navigation
+    })
+  }
+);

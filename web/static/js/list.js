@@ -1,4 +1,4 @@
-var items = document.querySelectorAll(".nav li");
+var items = document.querySelectorAll(".fa fa-bars push li");
 // 可以使用Array.prototype.forEach.call进行遍历
 [].forEach.call(items, function (item) {
 //  添加click事件

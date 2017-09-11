@@ -16,6 +16,19 @@ html {
   position: fixed;
   background: url("http://themes.mediacreed.com/html/synergy/assets/patterns/menu/menu_pattern_1.png");
   border-right: 10px solid #05d007;
+  float: left;
+}
+.sidebar-right{
+  float: left;
+  position: fixed;
+  left: 260px;
+  width: 100px;
+  height: 100px;
+  background: red;
+  display: none;
+}
+.show{
+  display: block;
 }
 .sidebar ul {
   margin-top: 30px;

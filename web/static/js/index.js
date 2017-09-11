@@ -20,3 +20,7 @@ $( "li" ).hover(
     })
   }
 );
+$(".first-tab").on("click",".num1",function () {
+    var index=$(this).index();
+    $(".sidebar-right").hide().eq(index).show();
+});

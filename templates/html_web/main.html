@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for item in list %}
+    <span>{{item.customer_name}}:{{item.customer_phone}}:{{ item.customer_addr }}</span><br/>
+    {% for i in item.province_set.all %}
+        <span>{{i.province_name}}:{{item.province_gdp}}</span><br/>
+    {% endfor %}
+{% endfor %}
+</body>
+</html>

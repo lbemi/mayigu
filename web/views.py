@@ -2,7 +2,7 @@ from django.shortcuts import render,render_to_response, get_list_or_404, redirec
 from django.http import  HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from .UserForm import UForm
-from .models import user_info
+from .models import user_info, customer
 
 
 # def Login(request):
@@ -39,3 +39,7 @@ def login_out(req):
     response = HttpResponseRedirect('/login/')
     response.delete_cookie('username')
     return response
+
+def table(request):
+    list = customer.objects.all()
+    return render_to_response('html_web/main.html', {'list' : list}, RequestContext(request))
